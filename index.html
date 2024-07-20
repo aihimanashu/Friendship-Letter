@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter</title>
+<style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .letter {
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  h1 {
+    color: #ff3366;
+  }
+  
+  p {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .press-button {
+    background-color: #ff3366;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .press-button:hover {
+    background-color: #e6005c;
+  }
+  
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+    position: relative;
+  }
+  .popup-content img{
+    width: 300px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .close:hover {
+    color: #333;
+  }
+  
+ 
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 100; }
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="letter">
+    <h1>My Dearest Friend,</h1>
+    <p style="color: green;">You are the most wonderful person in my life. I want to express my feelings for you in this digital Friendship letter.</p>
+    <p style="color: rgb(204, 0, 255);">With all my love,</p>
+    <p style="font-weight: bolder; color: rgb(96, 202, 221)  ; font-size: 60px;  background-color: yellow; border-bottom-left-radius: 80%; border-top-right-radius: 80%; font-family: sofia;">I'm Himanshu</p>
+    <button id="revealButton" class="press-button">Open Letter</button>
+  </div>
+</div>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" id="closePopup">&times;</span>
+    <p style="color: #e6005c;">Here's a cute gif just for you:</p>
+    <img src="./—Pngtree—iridescent affection pastel holographic green_14833721 (1).png" alt="Heart Gif">
+    <p style="color: red;"><b>My lovly Friend !</b></p>
+    <p style="color: rgb(204, 72, 204);">Hope this brightens your day!</p>
+  </div>
+</div>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const revealButton = document.getElementById('revealButton');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+  
+    revealButton.addEventListener('click', function() {
+      popup.style.display = 'flex';
+    });
+  
+    closePopup.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+  });
+  </script>
+</body>
+</html>
